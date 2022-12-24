@@ -4,7 +4,8 @@
   "description": "application for managing the HR duties",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js",
+    "server": "node app.js"
   },
   "author": "Brat_Dev",
   "license": "ISC",
