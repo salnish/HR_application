@@ -9,12 +9,12 @@ const routes: Routes = [
   {path:'userLogin',component:UserLoginComponent},
   {path:'hrLogin',component:HrLoginComponent},
   {
-    path:'user',
+    path:'hr',
     loadChildren:()=>
     import ('./routes/hr/hr.module').then((m)=>m.HrModule)
   },
   {
-    path:'Hr',
+    path:'user',
     loadChildren:()=>
     import('./routes/user/user.module').then((m)=>m.UserModule)
   },

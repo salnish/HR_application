@@ -1,3 +1,4 @@
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HrComponent } from './hr.component';
 import { NgModule } from '@angular/core';
@@ -7,8 +8,9 @@ const routes: Routes = [{
   path:'',
   component:HrComponent,
   children:[
-    {path:'',redirectTo:'/Hr/home',pathMatch:'full'},
-    {path:'home',component:DashboardComponent}
+    {path:'',redirectTo:'/hr/home',pathMatch:'full'},
+    {path:'home',component:DashboardComponent},
+    {path:'addEmployee',component:AddEmployeeComponent}
   ]
 }];
 
