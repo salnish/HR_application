@@ -4,33 +4,33 @@
             <h2>Add employee</h2>
         </div>
         <mat-card-content>
-            <form >
+            <form name="empForm" (ngSubmit)="submit()"[formGroup]="empForm">
                 <div>
                     <mat-form-field class="m-2" appearance="outline">
                         <mat-label>Emp Id</mat-label>
-                        <input matInput placeholder="Enter employee Id" required>
+                        <input formControlName="empId" matInput placeholder="Enter employee Id" required>
                     </mat-form-field>
                     <mat-form-field class="m-2"  appearance="outline">
                         <mat-label>Name</mat-label>
-                        <input matInput placeholder="Enter employee name" required>
+                        <input formControlName="name" matInput placeholder="Enter employee name" required>
                     </mat-form-field>
                 </div>
                  <div>
                     <mat-form-field class="m-2"  appearance="outline">
                         <mat-label>Email</mat-label>
-                        <input matInput placeholder="Enter employee email" required>
+                        <input formControlName="email" matInput placeholder="Enter employee email" required>
                     </mat-form-field>
                     <mat-form-field class="m-2"  appearance="outline">
                         <mat-label>phone</mat-label>
-                        <input matInput placeholder="Enter employee phone" required>
+                        <input formControlName="phone" matInput placeholder="Enter employee phone" required>
                     </mat-form-field>
                 </div>
                  <div>
                     <mat-form-field class="m-2"  appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Enter employee password" required>
+                        <input formControlName="password" matInput placeholder="Enter employee password" required>
                     </mat-form-field>
-                    <button class="mx-5" mat-raised-button color="accent" >Add employee</button>
+                    <button (submit)="empForm" class="mx-5" mat-raised-button color="accent" >Add employee</button>
                 </div>
             </form>
         </mat-card-content>

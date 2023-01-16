@@ -2,11 +2,11 @@ const jwt = require('json-web-token');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
 
-const addEmployee =async(req,res)=>{
+const addEmployee =async(req,res,next)=>{
     try{
         console.log(req.body)
-        const {name,email,phone,password,emId}=req.body;
-        if(!name||!email||!phone||!password||!emId){
+        const {name,email,phone,password,empId}=req.body;
+        if(!name||!email||!phone||!password||!empId){
             res.status(400)
             throw new Error('please add all the fields')
         }
@@ -28,7 +28,7 @@ const addEmployee =async(req,res)=>{
                 id:user.id,
                 name:user.name,
                 email:user.email,
-                emId:user.emId
+                empId:user.empId
             })
         } else {
             res.status(400);
@@ -36,9 +36,11 @@ const addEmployee =async(req,res)=>{
         }
     }catch(error){
         res.status(400);
-        throw new Error(error)
+        next(error)
     }
 }
+
+
 module.exports ={
     addEmployee
 }
