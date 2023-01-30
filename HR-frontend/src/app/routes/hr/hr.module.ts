@@ -12,6 +12,7 @@ import { HrRoutingModule } from './hr-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HrComponent } from '../hr/hr.component';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -19,7 +20,8 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
   declarations: [
     DashboardComponent,
     HrComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,

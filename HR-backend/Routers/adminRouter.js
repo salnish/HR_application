@@ -1,7 +1,7 @@
 const router = require ('express').Router()
-const {addEmployee}=require('../controllers/adminControllers')
+const {addEmployee,login,getAllUsers}=require('../controllers/adminControllers')
 
-router.get('/')
+router.route('/').post(login).get(getAllUsers)
 router.post('/addEmployee',addEmployee)
 
 

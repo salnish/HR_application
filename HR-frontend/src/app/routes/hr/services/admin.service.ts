@@ -13,4 +13,8 @@ export class AdminService {
   addEmployee(data:any){
     return this.http.post<any>(`${this._adminUrl}/addEmployee`,data)
   }
+
+  login(data:any){
+    return this.http.post<any>(`${this._adminUrl}`,data)
+  }
 }
